@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Griffy&family=Kirang+Haerang&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mainStyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order a New Plant</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav-bar"><span class="logo">BLOOM</span><a href="login.html" class="reg-link">Login</a><a href="register.html">Register</a></div>
+
+        <div class="inner-wrapper">
+            <div class="plant-img-wrapper">
+                <div class="plant-imgs">
+                    <img src="images\Bloom_1.png" class="pot-img">
+                    <img src="images\Bloom_1-7.png" class="flower" id="flower-1">
+                    <img src="images\Bloom_1-1.png" class="pot-back">
+                </div>
+            </div>
+            <div class="main-title">Purchase a New Plant</div>
+            <form class="login-form">
+                <div>
+                <label for="pname">Name your plant:</label>
+                <input type="text" id="pname" name="pname">
+                </div>
+                <div>
+                <label for="plant-select">Select a Plant</label>
+                <select id="plant-select">
+                    <optgroup>
+                      <option value="1">Plant 1</option>
+                      <option value="2">Plant 2</option>
+                      <option value="3">Plant 3</option>
+                      <option value="4">Plant 4</option>
+                      <option value="5">Plant 5</option>
+                      <option value="6">Plant 6</option>
+                    </optgroup>
+                </select>
+                </div>
+                  <input type="submit" value="Submit" class="submit">
+                </div>
+                
+            </form>
+        </div>
+    </div>   
+</body>
+</html>
