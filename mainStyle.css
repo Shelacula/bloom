@@ -127,6 +127,8 @@ body {
 
 .plant-imgs {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .pot-back, .flower {
@@ -141,13 +143,12 @@ body {
 
 .pot-back {
     left: 0;
-    bottom: 30%;
+    bottom: 28%;
     width: 100%;
 }
 
 .flower {
     z-index: 5;
     max-height: 70%;
-    left: 25%;
     bottom: 25%;
 }
