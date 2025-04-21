@@ -1,0 +1,29 @@
+{
+  "name": "bloom",
+  "version": "1.0.0",
+  "description": "A small browser-based game. The core mechanics will be buying plants, waiting for them to grow, and then brewing different potions by finding compatible combinations of plants. Sell potions to earn money to buy more plants!",
+  "homepage": "https://github.com/Shelacula/bloom#readme",
+  "bugs": {
+    "url": "https://github.com/Shelacula/bloom/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shelacula/bloom.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
