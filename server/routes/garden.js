@@ -22,4 +22,22 @@ router
   }
 })
 
+.put('/update', async (req, res) => {
+  try {
+    const garden = await Garden.editPlant(req.body)
+    res.send(garden)
+  } catch(err) {
+    res.status(401).send({message: err.message})
+  }
+})
+
+.delete('/sell', async (req, res) => {
+  try {
+    await Garden.sellPlant(req.body)
+    res.send({success: "Sold!"})
+  } catch(err) {
+    res.status(401).send({message: err.message})
+  }
+})
+
   module.exports = router

@@ -28,4 +28,18 @@ async function buyPlant(plant) {
     return await con.query(sql)
   }
 
-  module.exports = { getPlayerGarden, buyPlant }
+async function editPlant(plant) {
+  let sql = `
+  UPDATE Garden SET pname = ${plant.pname} WHERE plantID = ${plant.plantID}
+  `
+  return await con.query(sql)
+}
+
+async function sellPlant(plant) {
+  let sql = `
+  DELETE FROM Garden WHERE plantID = ${plant.plantID}
+  `
+  return await con.query(sql)
+}
+
+  module.exports = { getPlayerGarden, buyPlant, editPlant, sellPlant }
