@@ -14,7 +14,7 @@ async function createTable() {
 async function getPlant(plantID) {
   let sql = `
     SELECT * FROM Plants
-    WHERE PlantID="${plantID}"
+    WHERE PlantID=${plantID}
   `
   return await con.query(sql)
 }

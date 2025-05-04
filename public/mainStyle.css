@@ -6,6 +6,7 @@
 body {
     background: rgb(205, 209, 170);
     margin: 0;
+    font-family: "Kirang Haerang", serif;
 }
 
 .inner-wrapper {
@@ -18,18 +19,24 @@ body {
     color: white;
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-family: "Kirang Haerang", serif;
     text-align: center;
 }
 
 /* Navbar */
 
-.logo {
-    font-family: "Griffy", serif;
+.logo a {
+    font-family: "Griffy", serif !important;
     font-weight: bold; 
     font-size: 3rem;
     color: #f1f4d6;
     margin-right: 20px;
+    text-decoration: none;
+}
+
+.nav-wrapper{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 }
 
 .nav-bar {
@@ -40,30 +47,39 @@ body {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    z-index: 999;
 }
 
-.nav-bar a {
+.nav-link {
     padding: 20px;
     background: rgb(123, 143, 110);
     color: white;
     border-radius: 10px;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Kirang Haerang", serif;
     font-size: 1.2rem;
     transition: .6s;
 }
 
-.nav-bar a:hover {
+.nav-link:hover {
     background-color: rgb(74, 83, 68);
+    cursor: pointer;
 }
 
-.reg-link {
+#nav-links {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.money {
     margin-left: auto;
 }
 
+.stat-bar {
+    display: flex;
+    padding-right: 20px;
+}
 
 /* Form styles */
 
@@ -78,7 +94,6 @@ body {
     padding: 20px;
     gap: 20px;
     border-radius: 20px;
-    font-family: "Kirang Haerang", serif;
     font-size: 1.1rem;
 }
 
@@ -101,7 +116,6 @@ body {
     border-radius: 10px;
     padding: 10px;
     color: white;
-    font-family: "Kirang Haerang", serif;
     font-size: 1.3rem;
     transition: .6s;
 }
@@ -151,4 +165,23 @@ body {
     z-index: 5;
     max-height: 70%;
     bottom: 25%;
+}
+
+
+/* Garden styles */
+
+.garden-plot {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.garden-plot .plant-img-wrapper {
+    margin-bottom: 0 !important;
+    background: unset !important;
+}
+
+.ptext {
+    text-align: center;
 }

@@ -4,13 +4,22 @@ const router = express.Router()
 
 router
 
-.get('/garden', async (req, res) => {
+.get('/garden/:id', async (req, res) => {
     try {
-      const garden = await Garden.getPlayerGarden(req.body.playerID)
+      const garden = await Garden.getPlayerGarden(req.params.id)
       res.send(garden)
     } catch(err) {
       res.status(401).send({message: err.message})
     }
   })
+
+.post('/buy', async (req, res) => {
+  try {
+    const garden = await Garden.buyPlant(req.body)
+    res.send(garden)
+  } catch(err) {
+    res.status(401).send({message: err.message})
+  }
+})
 
   module.exports = router

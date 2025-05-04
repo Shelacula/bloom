@@ -6,7 +6,7 @@ router
 
 .get('/getPlant', async (req, res) => {
   try {
-    const plant = await Plant.getPlant(req.body.plantID)
+    const plant = await Plant.getPlant(req)
     res.send(plant)
   } catch(err) {
     res.status(401).send({message: err.message})

@@ -16,14 +16,14 @@ async function createTable() {
 
 async function getPlayerGarden(playerID) {
   let sql = `
-    SELECT g.PlantName, g.GrowthLevel, p.Cost, p.GrowTime FROM Garden as g INNER JOIN Plants as p ON g.PlantID = p.PlantID WHERE g.PlayerID ="${playerID}"
+    SELECT g.PlantName, g.GrowthLevel, p.Cost, p.GrowTime, p.PlantID FROM Garden as g INNER JOIN Plants as p ON g.PlantID = p.PlantID WHERE g.PlayerID =${playerID}
   `
   return await con.query(sql)
 }
 
 async function buyPlant(plant) {
     let sql = `
-      INSERT INTO Garden (PlayerID, PlantID, PlantName, GrowthLevel) VALUE (${playerID}, ${plant.plantID}, ${plant.plantName}, 0)"
+      INSERT INTO Garden (PlayerID, PlantID, PlantName, GrowthLevel) VALUE (${plant.playerID}, ${plant.type}, "${plant.pname}", 0)
     `
     return await con.query(sql)
   }
